@@ -1,0 +1,352 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Helvetica, Arial, Sans-Serif, serif;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+
+a:link {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: #c08b44;
+}
+
+/* Header styles */
+header {
+    color: #fff;
+    background-color: hsla(0, 0%, 20%, .5);
+    padding: 2%;
+    border-radius: 10px;
+    font-family: Syncopate, Helvetica, Arial, Sans-Serif, serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Syncopate, Helvetica, Arial, Sans-Serif, serif;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #304041;
+    border-radius: 10px;
+    color: white;
+    float: right;
+    clear: both;
+    font-family: Syncopate, Helvetica, Arial, Sans-Serif, serif;
+}
+
+/* Resetting default list styles */
+ul {
+    list-style-type: none;
+    padding: 5px;
+    margin: 0;
+}
+
+/* Styling the list items */
+ul li {
+    display: inline-block;
+    padding: 5px;
+    color: white;
+}
+
+/* Styling the links within list items */
+ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+
+}
+
+/* Hover effect for links */
+ul li a:hover {
+    background-color: #c08b44;
+    color: #304041;
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+
+p {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    width: 90%;
+    max-width: 1000px
+}
+
+/* Content area styles */
+.content {
+    grid-area: content;
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* Sidebar (Aside) styles */
+aside {
+    grid-area: aside;
+    background-color: #ccc;
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: hsla(0, 0%, 20%, .5);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+img {
+    min-width: 100px;
+    max-width: 25%;
+    border-radius: 5%;
+    margin: 2%;
+    margin-bottom: 5%;
+    transition: transform 0.3s ease;
+
+}
+
+.extra img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+/* Style to center the image */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #304041;
+    border: 2px solid #c08b44;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.button:hover {
+    transform: scale(1.1);
+    background-color: #304041;
+    border-color: #304041;
+}
+
+i {
+    font-size: 2em;
+    color: white;
+    background-color: #304041;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 1%;
+    transition: 0.3s ease;
+}
+
+i:hover {
+    transform: scale(1.1);
+    background-color: #304041;
+    border-color: #304041;
+}
+
+.title {
+    grid-area: head;
+}
+
+.menu {
+    grid-area: nav;
+}
+
+.content {
+    grid-area: main;
+
+}
+
+.extra {
+    grid-area: aside;
+}
+
+.foot {
+    grid-area: foot;
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+    background-color: #304041;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+/* nav */
+#mobile-menu {
+    padding: 7px;
+    margin-left: 7px;
+    display: flex;
+    background-color: #304041;
+}
+
+/* ham menu */
+.ham-menu {
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+    position: relative;
+}
+
+.ham-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span {
+    background-color: white;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'head head head'
+            'nav nav nav'
+            'main main main'
+            'aside aside aside'
+            'foot foot foot';
+        grid-gap: 0px;
+    }
+
+    #mobile-menu {
+        display: block;
+    }
+
+    #desktop-menu {
+        display: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1em;
+    }
+
+}
+
+/* For tablets: */
+@media only screen and (min-width:481px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'head head head head head head'
+            'main main main main main main'
+            'aside aside aside aside aside aside'
+            'foot foot foot foot foot foot';
+        grid-gap: 0px;
+        padding: 10px;
+
+    }
+
+    #mobile-menu {
+        display: none;
+    }
+
+}
+
+/* For desktop: */
+@media only screen and (min-width: 769px) {
+
+
+    #extra img {
+        max-width: 400px;
+    }
+
+    #extra {
+        font-size: 1.3em;
+    }
+}
